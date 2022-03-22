@@ -33,7 +33,7 @@
 				</button>
 				<a class="navbar-brand" href="javascript:void(0)">i-mogilev</a>
 			</div>
-			<div id="main-nav" class="navbar-collapse collapse navbar-responsive-collapse navStyle">
+			<div id="main-nav" class="navbar-collapse collapse navbar-responsive-collapse navStyle" data-toggle="collapse" data-target=".navbar-responsive-collapse" class = "navbar-toggle">
 				<ul class="nav navbar-nav" id="mainNav">
 					<li class="active"><a href="#hero_section" class="scroll-link">Главная</a></li>
 					<li><a href="#aboutUs" class="scroll-link">О нас</a></li>
