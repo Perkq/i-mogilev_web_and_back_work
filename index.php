@@ -393,10 +393,10 @@ if(isset($_POST['bsearch'])) {
 <div class="client_logos"><!--logos-->
 	<div class="container">
 		<ul class="fadeInRight animated wow">
-			<li><a href="javascript:void(0)"><img src="img/client_logo1.png" alt=""></a></li>
-			<li><a href="javascript:void(0)"><img src="img/client_logo2.png" alt=""></a></li>
-			<li><a href="javascript:void(0)"><img src="img/client_logo3.png" alt=""></a></li>
-			<li><a href="javascript:void(0)"><img src="img/client_logo5.png" alt=""></a></li>
+			<li><a href="https://www.apple.com"><img src="img/client_logo1.png" alt=""></a></li>
+			<li><a href="https://www.android.com/"><img src="img/client_logo2.png" alt=""></a></li>
+			<li><a href="https://www.samsung.com"><img src="img/client_logo3.png" alt=""></a></li>
+			<li><a href="https://www.microsoft.com"><img src="img/client_logo5.png" alt=""></a></li>
 		</ul>
 	</div>
 </div>
@@ -505,7 +505,7 @@ if(isset($_POST['bsearch'])) {
 							<div class="form-group label-floating">
 								<div class="input-group">
 								<label class="control-label">Поломка</label>
-								<textarea rows="10" cols="100" class="form-control" name="message" required
+								<textarea rows="5" cols="100" class="form-control" name="message" required
 								data-validation-required-message="Please enter your message" minlength="5" 
 								data-validation-minlength-message="Min 5 characters" 
 								maxlength="999" style="resize:none"></textarea>
