@@ -314,6 +314,7 @@ a.read_more2:hover {
 
 .service_block {
     text-align: center;
+    height: 340px;
     padding: 15px 15px 30px;
     background: #fed325;
     margin-bottom: 20px;
@@ -1193,6 +1194,8 @@ a.fancybox {
     overflow: hidden;
     display: block;
     position: relative;
+    width: 100%;
+    padding: -100px;
 }
 
 .portfolio-item .portfolio_img img {
@@ -1438,9 +1441,9 @@ a.fancybox {
 	overflow: hidden;
 	margin: 10px 1%;
 	min-width: 320px;
-	max-width: 480px;
+	max-width: 100%;
 	max-height: 360px;
-	width: 48%;
+	/* width: 48%; */
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
@@ -1785,12 +1788,8 @@ div.mc-image {
 /*
    Media Queries
 --------------------------- */
-@media (min-width: 768px) {
 
-
-}
 @media (max-width: 768px) {
-.collapse {/* display: none; *//* visibility: hidden; */}
 p{
 font-size:14px;
 }
@@ -1820,7 +1819,7 @@ line-height:22px;
 .service_block h3 { 
 font-size: 16px;
 }
-service_block p {
+.service_block p {
 font-size: 14px; 
 margin: 0px;
 margin-bottom: 20px;
@@ -1834,7 +1833,7 @@ margin: 0 18px;
 .page_section.team{
 padding: 40px 0;
 }
-, #clients {
+ #clients {
 padding: 40px 0;
 }
 .client_logos ul li {
@@ -1876,12 +1875,13 @@ margin: 0px;
 color: #222;
 background: #F9F9F9;
 }
-} 
-@media (max-width: 480px){ 
+}
+
+@media (max-width: 480px) { 
 .team_area {
 width: 99%;
 }
-}
+
 .input-group {
     width: 100%;
 }
@@ -1895,7 +1895,8 @@ width: 99%;
     font-weight: bold;
     font-size: 20px;
 }
-.navbar .navbar-brand  .material-icons{
+.navbar .navbar-brand  .material-icons {
 	height: 27px;
 	color: #f3a200;
+}
 }
