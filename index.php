@@ -294,7 +294,7 @@ if(isset($_POST['bsearch'])) {
 			<!--/Portfolio Item --> 
 			
 			<!-- Portfolio Item -->
-			<figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four	design	isotope-item effect-oscar">
+			<figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 100%; opacity: 1;" class="portfolio-item one-four	design	isotope-item effect-oscar">
 				<div class="portfolio_img"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
 			 <figcaption>		
 				<div>
