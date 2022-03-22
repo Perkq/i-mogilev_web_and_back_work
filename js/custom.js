@@ -76,9 +76,13 @@ $(document).ready(function() {
             columnNumb = 4;
         } else if (winWidth > 900) {
             columnNumb = 2;
-        } else if (winWidth > 479) {
+        }
+        // } else if (winWidth < 640) {
+        //     columnNumb = 1;
+        // }
+         else if (winWidth > 640) {
             columnNumb = 2;
-        } else if (winWidth < 479) {
+        } else if (winWidth < 640) {
             columnNumb = 1;
         }
 
