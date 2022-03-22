@@ -767,7 +767,7 @@ img {
 }
  
 #aboutUs {
-    padding: 40px 0 60px;
+    padding: 40px 0 20px;
 }
 section.companyInfo{
 }
@@ -1025,6 +1025,23 @@ section.companyInfo{padding: 30px 0 0 0;}
 .footer_bottom span a:hover {
     color: #fff;
 }
+
+/* Footer footer
+-------------------------------------------------*/
+.bottom {
+    font-size: 20px;
+    background: #1d3546;
+    margin-bottom: -20px;
+
+}
+
+.p_footer {
+    text-align: center;
+    color: white;
+    opacity: 50%;
+    padding: 20px 0 20px 0;
+}
+
 
 /* Animation Timers
 ---------------------------------*/
