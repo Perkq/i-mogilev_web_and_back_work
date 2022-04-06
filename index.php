@@ -48,24 +48,10 @@
 	</div>
 </header>
  <!--Hero_Section-->
-<section id="hero_section" class="top_cont_outer">
-	<div class="hero_wrapper">
-		<div class="container">
-			<div class="hero_section">
-				<div class="row">
-					<div class="col-lg-5 col-sm-7">
-						<div class="top_left_cont zoomIn wow animated"> 
-							<h2><strong>Сломался гаджет -</strong>
-							<span style="font-size:28px;">теперь наша проблема!</span></h2>
-							<p>i-mogilev поможет вам</p>
-							<a href="#contact" class="btn btn-raised btn-lg scroll-link">Заказать ремонт</a> </div>
-					</div>
-					<div class="col-lg-7 col-sm-5">
-			<img src="img/main_device_image.png" class="zoomIn wow animated" alt="" />
-			</div>
-				</div>
-			</div>
-		</div>
+<section class="top_cont_outer">
+	<div class="mainfon">
+		<div class="mainfontext">У Вас появилась проблема?<br/><br/><br/>i-mogilev - решит её быстро,<br/>недорого и самое главное качественно!</div>
+		<div class="mainfonimg"><img src="img\шапка52.png" class="mainfonimg1" alt=""></div>
 	</div>
 </section>
 <!--Hero_Section-->	

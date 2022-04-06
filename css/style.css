@@ -147,7 +147,7 @@ p {
 }
 
 .navStyle ul li:first-child {
-	/*margin:0px;*/;
+	/*margin:0px;*/
 }
 
 .navStyle ul li:last-child {
@@ -211,7 +211,6 @@ p {
 ---------------------------------*/
 
 .top_cont_outer {
-    background: linear-gradient(141deg, #0094d6 0%, #23587d 51%, #1d3546 75%);
     position: relative;
 }
 
@@ -404,7 +403,6 @@ a.read_more2:hover {
 }
 
 .service-list-col1 i {
-    display:;
     color: #888;
     font-size: 19px;
     font-style: normal;
@@ -773,11 +771,12 @@ section.companyInfo{
 }
 section.companyInfo{padding: 30px 0 0 0;}
 .company-bg{
-    background#fff;
+    background: #fff;
     padding: 50px 0;
 }
 .company-bg .content{
     background:#1d3546;
+    border-radius: 30px;
     color: #fff;
     float: right;
     padding: 34px;
@@ -1589,7 +1588,7 @@ figure.effect-oscar:hover p {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-	color: #b5b5b5;+++++++
+	color: #b5b5b5;
 }
 
 figure.effect-oscar:hover figcaption {
@@ -1916,7 +1915,43 @@ width: 99%;
 	height: 27px;
 	color: #f3a200;
 }
+}
 #bsearch_text{
     padding: 7px ;
     width: 222px;
+}
+.scroll-link{
+    color: black !important;
+
+}
+.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus{
+    background-color: #ef544c !important;
+}
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus{
+    background-color: white;
+}
+.btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .input-group-btn .btn:not(.btn-raised).btn-default{
+    background-color: #ef544c;
+}
+.btn.btn-raised:not(.btn-link), .input-group-btn .btn.btn-raised:not(.btn-link), .btn-group-raised .btn:not(.btn-link), .btn-group-raised .input-group-btn .btn:not(.btn-link){
+    background-color: #ef544c;   
+}
+.mainfon{
+    display: flex;
+    height: 680px;
+    background-color: #090909;
+}
+.mainfontext{
+    flex: 1 1 40%;
+    color: white;
+    width: 900px;
+    text-align: center;
+    padding-top: 11%;
+    font-size: 36px;
+}
+.mainfonimg{
+    flex: 1 1 60%;
+}
+.mainfonimg1{
+    height: 680px;
 }
