@@ -50,7 +50,7 @@
  <!--Hero_Section-->
 <section class="top_cont_outer">
 	<div class="mainfon">
-		<div class="mainfontext">У Вас появилась проблема?<br/><br/><br/>i-mogilev - решит её быстро,<br/>недорого и самое главное качественно!</div>
+		<div class="mainfontext">У Вас появилась проблема?<br/><br/><br/><span class="begintext">i-mogilev - решит её быстро,недорого и самое главное качественно!</span></div>
 		<div class="mainfonimg"><img src="img\шапка52.png" class="mainfonimg1" alt=""></div>
 	</div>
 </section>

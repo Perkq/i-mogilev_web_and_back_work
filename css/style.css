@@ -112,7 +112,7 @@ p {
 /* Nav Styles
 ---------------------------------*/
 .navbar, .navbar.navbar-default {
-    background-color: #ffffff;
+    background-color: black;
     color: rgba(255,255,255, 0.84);
     box-shadow: 1px 1px 2px rgba(146, 146, 146, 0.47);
 }
@@ -1921,20 +1921,14 @@ width: 99%;
     width: 222px;
 }
 .scroll-link{
-    color: black !important;
+    color: white !important;
 
 }
-.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus{
-    background-color: #ef544c !important;
+.containerheader{
+    background-color: black;
 }
-.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus{
-    background-color: white;
-}
-.btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .input-group-btn .btn:not(.btn-raised).btn-default{
-    background-color: #ef544c;
-}
-.btn.btn-raised:not(.btn-link), .input-group-btn .btn.btn-raised:not(.btn-link), .btn-group-raised .btn:not(.btn-link), .btn-group-raised .input-group-btn .btn:not(.btn-link){
-    background-color: #ef544c;   
+.navbar navbar-default{
+    background-color: black;
 }
 .mainfon{
     display: flex;
@@ -1946,12 +1940,24 @@ width: 99%;
     color: white;
     width: 900px;
     text-align: center;
-    padding-top: 11%;
-    font-size: 36px;
+    padding-top: 6%;
+    font-size: 50px;
 }
 .mainfonimg{
     flex: 1 1 60%;
 }
 .mainfonimg1{
     height: 680px;
+}
+.begintext{
+    color: #d1d1d1;
+    text-align: left;
+    display: inline-block;
+    font-size: 24px;
+    width: 400px;
+    height: 200px;
+}
+.scroll-link:hover{
+    background-color: white;
+    color: black;
 }

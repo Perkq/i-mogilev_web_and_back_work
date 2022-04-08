@@ -2268,13 +2268,14 @@ legend {
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
   /* color: inherit; */
-  background-color: #fed325;
+  background-color: black;
 }
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus {
   /* color: inherit; */
-  background-color: #fed325;
+  background-color: white;
+  color: black !important;
 }
 .navbar .navbar-nav > .disabled > a,
 .navbar .navbar-nav > .disabled > a:hover,
