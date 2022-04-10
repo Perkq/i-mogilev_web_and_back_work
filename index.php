@@ -26,12 +26,10 @@
 	<div class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="javascript:void(0)">i-mogilev</a>
+			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
+			<div class="logo123">
+			<a class="navbar-brand" href="javascript:void(0)"><span class="logoheader"><strong>I-MOGILEV</strong></a>
+			</div>
 			</div>
 			<div id="main-nav" class="navbar-collapse collapse navbar-responsive-collapse navStyle" data-toggle="collapse" data-target=".navbar-responsive-collapse" class = "navbar-toggle">
 				<ul class="nav navbar-nav" id="mainNav">
@@ -50,7 +48,7 @@
  <!--Hero_Section-->
 <section class="top_cont_outer">
 	<div class="mainfon">
-		<div class="mainfontext">У Вас появилась проблема?<br/><br/><br/><span class="begintext">i-mogilev - решит её быстро,недорого и самое главное качественно!</span></div>
+		<div class="mainfontext"><strong>У Вас появилась проблема?</strong><br/><br/><br/><span class="begintext">i-mogilev - решит её быстро,недорого и самое главное качественно!</span></div>
 		<div class="mainfonimg"><img src="img\шапка52.png" class="mainfonimg1" alt=""></div>
 	</div>
 </section>
@@ -66,7 +64,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="content">
-					<h2>Акция</h2>
+					<h2><strong>Акция</strong></h2>
 						<p>Закажите ремонт сейчас,и в подарок Вам мы проведём бесплатную диагностику вашего девайса.</p>
 					<div class="compayt-button">
 						<a href="#contact" class="scroll-link btn btn-effect scroll-link">Заказать<i class="icon-envelope"></i></a>
@@ -77,67 +75,7 @@
 	</div>
 <!-- .container -->
 </div>
- 
-<div class="inner_wrapper">
-	<div class="container">
-		<div class="inner_section">
-			<div class="row">
-				<div class=" col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-right"><img src="img/about-img.jpg" class="withripple delay-03s animated wow " alt=""></div>
-				<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
-					<div class=" delay-01s animated fadeInDown wow animated">
-						<h3>Мы поможем вам починить ваш мобильный телефон фотоаппарат, навигатор, ноутбук , планшет , видеокамеру</h3><br/> 
-						<p>Решение любой проблемы, связанной с ремонтом мобильных телефонов, фотоаппаратов, навигаторов, ноутбуков, планшетов, видеокамер. Кратчайшие сроки ремонта, гарантия до 4 месяцев.</p> 
-
-                    </div>
-                    <div>
-<?php
-   function search($words){
-	$words=htmlspecialchars($words);
-	if($words==="") return false;
-	$query_search.='imei='.$words;
-	$query ="SELECT * FROM remont WHERE $query_search";
-	$mysqli =new mysqli("localhost","root","","base_tech");
-	$result_set =$mysqli->query($query);
-	$i=0;
-	while($row = $result_set->fetch_assoc()) {
-		$results[$i]=$row;
-		$i++;
-	}	
-	return $results;
-}
-
-  if(isset($_POST['bsearch'])) {
-	$words=$_POST['words'];
-	$results=search($words);
-}
-?>
-<form  name="search" action="index.php" method="POST">
-<input type="text" id="bsearch_text" name="words"  maxlength="15" placeholder="Введите imei номер"/>
-<input  type="submit"  id="bsearch" value="Проверить готовность" class="btn btn-raised btn-lg scroll-link" name="bsearch" /> 
-</form>
-<?php 
-if(isset($_POST['bsearch'])) {
-	
-	if ($results===false) 
-		echo "Введите в поле номер заказа";
-	if(count($results)==0) echo "Ничего не найдено";
-	else 
-		for ($i=0;$i<count($results);$i++){
-			echo "Модель : ".$results[$i]["model"]."<br />";
-			echo "Статус : ".$results[$i]["status"]."<br />";
-			echo "Цена работ : ".$results[$i]["cost"]."<br />";
-		}
-}
-
-?>
-                        </div>
-		 		</div>
-                </div>
-
-			</div>
-		</div>
-	</div>
-
+		
 <!--Aboutus--> 
 
 <!--Service-->
@@ -388,47 +326,10 @@ if(isset($_POST['bsearch'])) {
 </div>
 </section>
 <!--logos--> 
-<section class="page_section team" id="team"><!--main-section team-start-->
-	<div class="container">
-		<h2>Команда</h2>
-		<h6>Чем сможем, тем и поможем</h6>
-		<div class="team_section clearfix">
-			<div class="team_area">
-				<div class="team_box wow fadeInDown delay-03s">
-					<img src="img/team_pic1.jpg" alt="">
-				</div>
-				<h3 class="wow fadeInDown delay-03s">Главный редактор сайта</h3>
-				<span class="wow fadeInDown delay-03s">Chief Executive Officer</span>
-				<p class="wow fadeInDown delay-03s"> Наполнение контентом (копирайт, рерайт, наполнение товарами, 
-                    наполнение графическими материалами, 
-                    а также редактирование всей информации),
-                    отслеживание актуальности контента.</p>
-			</div>
-			<div class="team_area">
-				<div class="team_box	wow fadeInDown delay-06s">
-					<img src="img/team_pic2.jpg" alt="">
-				</div>
-				<h3 class="wow fadeInDown delay-06s">Вице-президент</h3>
-				<span class="wow fadeInDown delay-06s">Vice President</span>
-				<p class="wow fadeInDown delay-06s"> Полное ведение сайта компании,
-                    разработка дизайна и интерфейса web-сайта,
-                   продвижение и поддержка работы сайта.</p>
-			</div>
-			<div class="team_area">
-				<div class="team_box wow fadeInDown delay-09s">
-					<img src="img/img-3.jpg" alt="">
-				</div>
-				<h3 class="wow fadeInDown delay-09s">Менеджер</h3>
-				<span class="wow fadeInDown delay-09s">Senior Manager</span>
-				<p class="wow fadeInDown delay-09s">Наполнение сайтов грамотным и качественным контентом, 
-                    SEO оптимизированным текстом.
-                    Работа с изображением, видео.
-                    Размещение информации в социальных сетях.</p>
-			</div>
-		</div>
-	</div>
-</section>
 <!--/Team-->
+<div class="clientry">
+	
+</div>
 <!--Footer-->
 <footer class="footer_wrapper" id="contact">
 	<div class="container">

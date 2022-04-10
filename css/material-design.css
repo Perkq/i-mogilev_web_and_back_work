@@ -206,7 +206,7 @@ body .container-fluid .jumbotron-danger {
 .btn:not(.btn-raised).btn-default,
 .input-group-btn .btn:not(.btn-raised).btn-default {
   color: rgba(0,0,0, 0.87);
-  background: #fed325;
+  background-image: linear-gradient(90deg,#f56772,#ba6bff);
 }
 .btn:not(.btn-raised).btn-inverse,
 .input-group-btn .btn:not(.btn-raised).btn-inverse {
