@@ -317,7 +317,7 @@ a.read_more2:hover {
     text-align: center;
     height: 340px;
     padding: 15px 15px 30px;
-    background: #fed325;
+    background: black;
     margin-bottom: 20px;
 }
 
@@ -347,7 +347,10 @@ a.read_more2:hover {
 }
 
 .service_icon i {
-    color: #1d3546;
+    background-image: linear-gradient(90deg,#f56772,#ba6bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image-slice: 1;
     font-size: 40px;
     margin-top: 0;
     position: relative;
@@ -359,13 +362,13 @@ a.read_more2:hover {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: #111111;
+    color: white;
     margin: 25px 0 18px;
 }
 
 .service_block p {
     font-size: 13px;
-    color: #404040;
+    color: white;
     margin: 0px;
 }
 	
@@ -777,13 +780,19 @@ section.companyInfo{padding: 30px 0 0 0;}
     padding: 50px 0;
 }
 .company-bg .content{
-    background: black;
+    background-image:url(http://php.loc/NadyaProject/img/logo123.svg);
+	background-repeat: no-repeat;
+	background-size: 100px;
+	background-attachment:scroll;
+	background-position: 40px;
+	text-align:right;
     border-radius: 30px;
     color: #fff;
     float: right;
     padding: 34px;
     position: relative;
-    text-align: right;
+    padding-left: 160px;
+    background-color: black;
 }
 .company-bg .content h2{ 
     color: #fff; 
@@ -1030,8 +1039,12 @@ section.companyInfo{padding: 30px 0 0 0;}
 /* Footer footer
 -------------------------------------------------*/
 .bottom {
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg,#f56772,#ba6bff);
+    -moz-border-image: -moz- linear-gradient(90deg,#f56772,#ba6bff);
+    -webkit-border-image: -webkit- linear-gradient(90deg,#f56772,#ba6bff);
+    border-image-slice: 1;
     font-size: 20px;
-    background: #1d3546;
     margin-bottom: -20px;
 
 }
@@ -1040,7 +1053,6 @@ section.companyInfo{padding: 30px 0 0 0;}
     background-color: black;
     text-align: center;
     color: white;
-    opacity: 50%;
     padding: 20px 0 20px 0;
 }
 
@@ -1158,10 +1170,9 @@ a.fancybox {
 }
 
 #filters ul li a:hover h5, #filters ul li a.active h5 {
-    background: #fed325;
+    background-image: linear-gradient(90deg,#f56772,#ba6bff);
     color: #040404;
     text-decoration: none;
-    border: #fed325 solid 1px;
 }
 
 .section-title h2 {
@@ -1984,10 +1995,95 @@ strong{
     margin-right: 10px;
 }
 .clientry{
-    height: 913px;
+    height: 700px;
     width: 100%;
     background-image: url(http://php.loc/NadyaProject/img/заказ.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
+}
+.clientrytext{
+    font-weight: bold;
+    padding-bottom: 10%;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 46px;
+}
+.divtry{
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 60px;
+}
+.otstup{
+    width: 5%;
+    height: 5%;
+}
+.labeltry{
+    color: white;
+    font-size: 18px;
+}
+.divtry1{
+    margin-top: 2%;
+    height: 20%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.try1{
+    margin-left: 2%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg,#f56772,#ba6bff);
+    -moz-border-image: -moz- linear-gradient(90deg,#f56772,#ba6bff);
+    -webkit-border-image: -webkit- linear-gradient(90deg,#f56772,#ba6bff);
+    border-image-slice: 1;
+    font-size: 18px;
+    padding-top: 5px;
+    color: white;
+}
+.try1:focus{
+    margin-left: 2%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg,#f56772,#ba6bff);
+    -moz-border-image: -moz- linear-gradient(90deg,#f56772,#ba6bff);
+    -webkit-border-image: -webkit- linear-gradient(90deg,#f56772,#ba6bff);
+    border-image-slice: 1;
+    font-size: 18px;
+    padding-top: 5px;
+    color: white;
+}
+.divtry2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.buttontry{
+    border: 0;
+    background-image: linear-gradient(90deg,#f56772,#ba6bff);
+    height: 50px;
+    width:  350px;
+    font-size: 18px;
+    transition: transform 0.3s ease-out ;
+    color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.buttontry:hover{
+    border: 0;
+    transform: scale(1.1);
+}
+.fotip{
+    border-top: 1px solid white;
+    background-color: black;
+}
+.footerip{
+    font-size: 22px;
+    padding: 14px 0 14px 0;
 }

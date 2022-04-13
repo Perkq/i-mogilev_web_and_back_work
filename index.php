@@ -65,7 +65,7 @@
 			<div class="col-md-6">
 				<div class="content">
 					<h2><strong>Акция</strong></h2>
-						<p>Закажите ремонт сейчас,и в подарок Вам мы проведём бесплатную диагностику вашего девайса.</p>
+						<p>Закажите ремонт сейчас,и в подарок Вам мы про-<br/>ведём бесплатную диагностику вашего девайса.</p>
 					<div class="compayt-button">
 						<a href="#contact" class="scroll-link btn btn-effect scroll-link">Заказать<i class="icon-envelope"></i></a>
 					</div>
@@ -328,7 +328,16 @@
 <!--logos--> 
 <!--/Team-->
 <div class="clientry">
-	
+	<div class="otstup"></div>
+	<div class="divtry">
+		<div class="clientrytext">Проверка состояния заказа</div>
+		<form action="" class="formtry">
+			<center class="divtry1"><label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="" id="tryseries" placeholder="AB" maxlength=""></center>
+			<center class="divtry1"><label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="" id="trynumber" placeholder="123456789..."></center>
+			<center class="divtry2"><button class="buttontry" type="button">Проверить</button></center>
+			<center><img src="img/logo123.svg" alt="логотип" class="logo123img"></img></center>
+		</form>
+	</div>
 </div>
 <!--Footer-->
 <footer class="footer_wrapper" id="contact">

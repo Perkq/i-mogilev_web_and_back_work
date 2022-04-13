@@ -292,7 +292,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-fab.btn-info,
 .btn-group-raised .btn.btn-info,
 .btn-group-raised .input-group-btn .btn.btn-info {
-  background-color: #fbcd13;
+  background-image: linear-gradient(90deg,#f56772,#ba6bff);
   color: rgb(20, 20, 20);
 }
 .btn.btn-raised.btn-warning,
@@ -1756,11 +1756,10 @@ fieldset[disabled] .form-group .form-control {
 }
 .form-group.is-focused .form-control {
   outline: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
-  background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
-  -webkit-background-size: 100% 2px, 100% 1px;
+  background-image: -webkit-linear-gradient(90deg,#f56772,#ba6bff), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(90deg,#f56772,#ba6bff), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(90deg,#f56772,#ba6bff), linear-gradient(#D2D2D2, #D2D2D2);
+  -webkit-background-size: 10% 2px, 100% 1px;
           background-size: 100% 2px, 100% 1px;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1936,6 +1935,7 @@ label.control-label {
 }
 .form-group.label-floating label.control-label,
 .form-group.label-placeholder label.control-label {
+  color: white;
   top: -7px;
   font-size: 16px;
   line-height: 1.42857143;
