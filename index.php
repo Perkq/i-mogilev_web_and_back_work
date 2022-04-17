@@ -754,21 +754,7 @@
 <script src="js/wow.min.js"></script>
 
 <!-- Script Files -->
-<script type="text/javascript">
-$("#form").on("submit", function() {
-	$.ajax({
-		url: 'database.php',
-		method: 'post',
-		dataType: 'html',
-		data: $(this).serialize(),
-		success: function(data){
-			if(data) {
-				window.open('admin_page.php');
-			};
-		}
-	});
-});
-</script>
+<script type="text/javascript" src="js/dbase.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.nav.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
