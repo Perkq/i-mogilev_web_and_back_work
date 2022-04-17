@@ -1,3 +1,7 @@
+<!-- <?php
+ 	require 'database.php';
+	?> -->
+
 <!DOCTYPE html>
 <html> 
 <head>
@@ -331,11 +335,11 @@
 	<div class="otstup"></div>
 	<div class="divtry">
 		<div class="clientrytext">Проверка состояния заказа</div>
-		<form action="" class="formtry">
-			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="" id="tryseries" placeholder="AB" maxlength="">
+		<form action="database.php" class="formtry">
+			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="">
 			<br />
-			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="" id="trynumber" placeholder="123456789...">
-			<button class="buttontry" type="button">Проверить</button>
+			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789...">
+			<button class="buttontry" type="submit">Проверить</button>
 			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
 		</form>
 	</div>
@@ -757,7 +761,6 @@
 <script src="fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
 <script type="text/javascript" src="js/custom.js"></script>
 
-
 <script>
 	$(function () {
 		$.material.init(); 
@@ -775,5 +778,8 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 	<p class = "p_footer">И.П. Нестеренко Е.А. УНП 791041642 от 28.04.2016 выдано Администрацией Октябрьского района г.Могилёва</p>
 	<p class = "p_footer">  i-m.by	© 2017</p>
   </footer>
+
+
+
 </body>
 </html>
