@@ -15,11 +15,8 @@ $result = $conn->query($sql);
             header("Location: admin_page.php");
         }
         else {
-            // header("Location: admin_page.php");
-            echo  "//////////////////////" . $serie . "asfffffffffffffffffffffffff";
+            header("Location: index.php");
         }
-    	// echo "<p>Первый объект СУКА " . $row["Login"];
-		// echo "<p>Второй объект НАхуй " . $row["Password"];
 	}
 
 ?>

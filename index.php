@@ -335,7 +335,7 @@
 	<div class="otstup"></div>
 	<div class="divtry">
 		<div class="clientrytext">Проверка состояния заказа</div>
-		<form action="database.php" class="formtry">
+		<form method="post" action="database.php" class="formtry">
 			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="">
 			<br />
 			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789...">
