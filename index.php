@@ -335,11 +335,11 @@
 	<div class="otstup"></div>
 	<div class="divtry">
 		<div class="clientrytext">Проверка состояния заказа</div>
-		<form method="post" action="database.php" class="formtry">
+		<form method="post" action="javascript:void(0);" class="formtry" id="form">
 			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="">
 			<br />
 			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789...">
-			<button class="buttontry" type="submit">Проверить</button>
+			<button class="buttontry" type="submit" id="form_subm">Проверить</button>
 			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
 		</form>
 	</div>
@@ -754,6 +754,21 @@
 <script src="js/wow.min.js"></script>
 
 <!-- Script Files -->
+<script type="text/javascript">
+$("#form").on("submit", function() {
+	$.ajax({
+		url: 'database.php',
+		method: 'post',
+		dataType: 'html',
+		data: $(this).serialize(),
+		success: function(data){
+			if(data) {
+				window.open('admin_page.php');
+			};
+		}
+	});
+});
+</script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.nav.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
