@@ -1,7 +1,3 @@
-<!-- <?php
- 	require 'database.php';
-	?> -->
-
 <!DOCTYPE html>
 <html> 
 <head>
@@ -335,12 +331,31 @@
 	<div class="otstup"></div>
 	<div class="divtry">
 		<div class="clientrytext">Проверка состояния заказа</div>
-		<form method="post" action="javascript:void(0);" class="formtry" id="form">
+		<form method="post" action="" class="formtry" id="form">
 			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="">
 			<br />
 			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789...">
 			<button class="buttontry" type="submit" id="form_subm">Проверить</button>
 			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
+			<?php
+				include 'php\connection_admin.php';
+				    
+				$serie = $_POST['series'];
+				$check = $_POST['check'];
+
+				$sql = "SELECT * FROM admins";
+				$result = $conn->query($sql);
+
+				foreach($result as $row) {
+       			global $serie;
+        		global $check;
+
+        		 if (($serie  == $row["Login"]) && ($check  == $row["Password"])) {
+        		     echo "<script> window.open('php/admin_page.php')</script>";
+        		 }
+			}
+
+		?>
 		</form>
 	</div>
 </div>
@@ -386,7 +401,7 @@
 				<div class="col-lg-8 wow fadeInLeft delay-06s">
 					<div class="form">
 						<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-						<form method= "POST"  novalidate> 
+						<form method= "post" action="" id="form_sec"  novalidate> 
 							<div class="form-group label-floating">
 								<div class="input-group">
 									<label class="control-label">Имя</label>
@@ -414,6 +429,16 @@
 							</div> 		 
 							<div id="success"> </div> 
 							<button type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
+							<?php 
+    						include 'php\conection_devices.php';
+
+   							$pogon = $_POST['name'];
+    						$ssilka = $_POST['email'];
+   							$text = $_POST['message'];
+
+    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '', '', '$text', '')";
+    						$conn->query($sql);
+							?>
 						</form>
 					</div>
 				</div>
@@ -754,7 +779,7 @@
 <script src="js/wow.min.js"></script>
 
 <!-- Script Files -->
-<script type="text/javascript" src="js/dbase.js"></script>
+
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.nav.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
