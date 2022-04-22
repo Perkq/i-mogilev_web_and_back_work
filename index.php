@@ -354,6 +354,7 @@
         		     echo "<script> window.open('php/admin_page.php')</script>";
         		 }
 			}
+			mysqli_close($conn);
 
 		?>
 		</form>
@@ -401,7 +402,7 @@
 				<div class="col-lg-8 wow fadeInLeft delay-06s">
 					<div class="form">
 						<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-						<form method= "post" action="" id="form_sec"  novalidate> 
+						<form method= "post" action="" id="form_sec" enctype="multipart/form-data"  novalidate> 
 							<div class="form-group label-floating">
 								<div class="input-group">
 									<label class="control-label">Имя</label>
@@ -427,17 +428,43 @@
 								maxlength="999" style="resize:none"></textarea>
 								</div>
 							</div> 		 
-							<div id="success"> </div> 
+							<div id="success"> </div>
+							<div class="form-group label-floating">
+								<div class="input-group">
+									<label class="control-label">File</label>
+									<input type="file" style=" position: inherit; opacity:1;" class="btn btn-block btn-lg btn-raised btn-info pull-right" name= "file">
+								</div>
+							</div> 	
+							<br />
+							<br />
 							<button type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
+
 							<?php 
-    						include 'php\conection_devices.php';
+    						include 'php\connection_devices.php';
+
+							if(!empty($_FILES['file'])) {
+								$file = $_FILES['file'];
+								$name = $file['name'];
+								$pathFile = __DIR__ . '/user_img/' . $name; 
+
+								if(!move_uploaded_file($file['tmp_name'], $pathFile)) {
+									echo 'Файл не смог загрузиться';
+								}
+							}
+
+							
 
    							$pogon = $_POST['name'];
     						$ssilka = $_POST['email'];
    							$text = $_POST['message'];
+							// date_default_timezone_set('Belarus/Minsk');
+							date_default_timezone_set('Europe/Minsk');
+							$fulldate = getdate();
+							$date = $fulldate["mday"] . "/" . $fulldate["mon"] . "/" . $fulldate["year"] . " " . $fulldate["hours"] . ":" . $fulldate["minutes"];
 
-    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '', '', '$text', '')";
+    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '$date', 'moderation', '$text', '$name')";
     						$conn->query($sql);
+							mysqli_close($conn);
 							?>
 						</form>
 					</div>
