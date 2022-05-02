@@ -1,7 +1,3 @@
-<!-- <?php
- 	require 'database.php';
-	?> -->
-
 <!DOCTYPE html>
 <html> 
 <head>
@@ -335,12 +331,32 @@
 	<div class="otstup"></div>
 	<div class="divtry">
 		<div class="clientrytext">Проверка состояния заказа</div>
-		<form method="post" action="javascript:void(0);" class="formtry" id="form">
+		<form method="post" action="" class="formtry" id="form">
 			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="">
 			<br />
 			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789...">
 			<button class="buttontry" type="submit" id="form_subm">Проверить</button>
 			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
+			<?php
+				include 'php\connection_admin.php';
+				    
+				$serie = $_POST['series'];
+				$check = $_POST['check'];
+
+				$sql = "SELECT * FROM admins";
+				$result = $conn->query($sql);
+
+				foreach($result as $row) {
+       			global $serie;
+        		global $check;
+
+        		 if (($serie  == $row["Login"]) && ($check  == $row["Password"])) {
+        		     echo "<script> window.open('php/admin_page.php')</script>";
+        		 }
+			}
+			mysqli_close($conn);
+
+		?>
 		</form>
 	</div>
 </div>
@@ -386,7 +402,7 @@
 				<div class="col-lg-8 wow fadeInLeft delay-06s">
 					<div class="form">
 						<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-						<form method= "POST"  novalidate> 
+						<form method= "post" action="" id="form_sec" enctype="multipart/form-data"  novalidate> 
 							<div class="form-group label-floating">
 								<div class="input-group">
 									<label class="control-label">Имя</label>
@@ -412,8 +428,43 @@
 								maxlength="999" style="resize:none"></textarea>
 								</div>
 							</div> 		 
-							<div id="success"> </div> 
+							<div id="success"> </div>
+							<div class="form-group label-floating">
+								<div class="input-group">
+									<label class="control-label">File</label>
+									<input type="file" style=" position: inherit; opacity:1;" class="btn btn-block btn-lg btn-raised btn-info pull-right" name= "file">
+								</div>
+							</div> 	
+							<br />
+							<br />
 							<button type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
+
+							<?php 
+    						include 'php\connection_devices.php';
+
+							if(!empty($_FILES['file'])) {
+								$file = $_FILES['file'];
+								$name = $file['name'];
+								$pathFile = __DIR__ . '/user_img/' . $name; 
+
+								if(!move_uploaded_file($file['tmp_name'], $pathFile)) {
+									echo 'Файл не смог загрузиться';
+								}
+							}
+
+							
+
+   							$pogon = $_POST['name'];
+    						$ssilka = $_POST['email'];
+   							$text = $_POST['message'];
+							date_default_timezone_set('Europe/Minsk');
+							$fulldate = getdate();
+							$date = $fulldate["mday"] . "/" . $fulldate["mon"] . "/" . $fulldate["year"];
+
+    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '$date', 'moderation', '$text', '$name')";
+    						$conn->query($sql);
+							mysqli_close($conn);
+							?>
 						</form>
 					</div>
 				</div>
@@ -754,7 +805,7 @@
 <script src="js/wow.min.js"></script>
 
 <!-- Script Files -->
-<script type="text/javascript" src="js/dbase.js"></script>
+
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.nav.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
