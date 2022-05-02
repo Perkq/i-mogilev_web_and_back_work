@@ -457,10 +457,9 @@
    							$pogon = $_POST['name'];
     						$ssilka = $_POST['email'];
    							$text = $_POST['message'];
-							// date_default_timezone_set('Belarus/Minsk');
 							date_default_timezone_set('Europe/Minsk');
 							$fulldate = getdate();
-							$date = $fulldate["mday"] . "/" . $fulldate["mon"] . "/" . $fulldate["year"] . " " . $fulldate["hours"] . ":" . $fulldate["minutes"];
+							$date = $fulldate["mday"] . "/" . $fulldate["mon"] . "/" . $fulldate["year"];
 
     						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '$date', 'moderation', '$text', '$name')";
     						$conn->query($sql);
