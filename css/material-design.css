@@ -206,7 +206,7 @@ body .container-fluid .jumbotron-danger {
 .btn:not(.btn-raised).btn-default,
 .input-group-btn .btn:not(.btn-raised).btn-default {
   color: rgba(0,0,0, 0.87);
-  background-image: linear-gradient(90deg,#f56772,#ba6bff);
+  background: #fed325;
 }
 .btn:not(.btn-raised).btn-inverse,
 .input-group-btn .btn:not(.btn-raised).btn-inverse {
@@ -292,7 +292,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-fab.btn-info,
 .btn-group-raised .btn.btn-info,
 .btn-group-raised .input-group-btn .btn.btn-info {
-  background-image: linear-gradient(90deg,#f56772,#ba6bff);
+  background-color: #fbcd13;
   color: rgb(20, 20, 20);
 }
 .btn.btn-raised.btn-warning,
@@ -1756,10 +1756,11 @@ fieldset[disabled] .form-group .form-control {
 }
 .form-group.is-focused .form-control {
   outline: none;
-  background-image: -webkit-linear-gradient(90deg,#f56772,#ba6bff), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: -o-linear-gradient(90deg,#f56772,#ba6bff), -o-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: linear-gradient(90deg,#f56772,#ba6bff), linear-gradient(#D2D2D2, #D2D2D2);
-  -webkit-background-size: 10% 2px, 100% 1px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fed325), to(#fed325)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient(#fed325, #fed325), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(#fed325, #fed325), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#fed325, #form-group label-floating is-empty), linear-gradient(#D2D2D2, #D2D2D2);
+  -webkit-background-size: 100% 2px, 100% 1px;
           background-size: 100% 2px, 100% 1px;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1935,7 +1936,6 @@ label.control-label {
 }
 .form-group.label-floating label.control-label,
 .form-group.label-placeholder label.control-label {
-  color: white;
   top: -7px;
   font-size: 16px;
   line-height: 1.42857143;
@@ -2268,14 +2268,13 @@ legend {
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
   /* color: inherit; */
-  background-color: black;
+  background-color: white;
 }
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus {
   /* color: inherit; */
   background-color: white;
-  color: black !important;
 }
 .navbar .navbar-nav > .disabled > a,
 .navbar .navbar-nav > .disabled > a:hover,
@@ -3476,5 +3475,8 @@ hr.on-light {
   content: "\e5c5";
   pointer-events: none;
   color: #757575;
+}
+.form-group.label-floating label.control-label{
+  color: white;
 }
 /*# sourceMappingURL=bootstrap-material-design.css.map */

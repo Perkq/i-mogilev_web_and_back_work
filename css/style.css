@@ -89,9 +89,7 @@ p {
 ---------------------------------*/
 
 #header_wrapper {
-    background: #ffffff;
     padding: 0px 0px;
-    height: 60px;
 }
 
 .header_box {
@@ -113,10 +111,9 @@ p {
 /* Nav Styles
 ---------------------------------*/
 .navbar, .navbar.navbar-default {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.85);
     color: rgba(255,255,255, 0.84);
     box-shadow: 1px 1px 2px rgba(146, 146, 146, 0.47);
-    height: 60px;
 }
 .navbar-inverse {
     background-color: transparent;
@@ -149,7 +146,7 @@ p {
 }
 
 .navStyle ul li:first-child {
-	/*margin:0px;*/
+	/*margin:0px;*/;
 }
 
 .navStyle ul li:last-child {
@@ -213,6 +210,9 @@ p {
 ---------------------------------*/
 
 .top_cont_outer {
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: -20vh;
+    height: 115vh;
     position: relative;
 }
 
@@ -251,7 +251,7 @@ p {
     line-height: 52px;
     margin: 0 0 26px 0;
     font-family: 'Raleway', sans-serif;
-    text-align: left;
+    text-align: center;
 }
 
 .top_left_cont h2 strong {
@@ -261,8 +261,9 @@ p {
 .top_left_cont p {
     font-size: 16px;
     color: rgb(255, 255, 255);
-    margin: 0 0 30px 0;
+    margin: 10vh 0 10vh 0;
     line-height: 26px;
+    text-align: center;
 }
 
 a.read_more2 {
@@ -314,10 +315,10 @@ a.read_more2:hover {
 }
 
 .service_block {
-    text-align: center;
     height: 340px;
+    text-align: center;
     padding: 15px 15px 30px;
-    background: black;
+    background: #fed325;
     margin-bottom: 20px;
 }
 
@@ -347,10 +348,7 @@ a.read_more2:hover {
 }
 
 .service_icon i {
-    background-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-image-slice: 1;
+    color: #1d3546;
     font-size: 40px;
     margin-top: 0;
     position: relative;
@@ -362,13 +360,13 @@ a.read_more2:hover {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: white;
+    color: #111111;
     margin: 25px 0 18px;
 }
 
 .service_block p {
     font-size: 13px;
-    color: white;
+    color: #404040;
     margin: 0px;
 }
 	
@@ -408,6 +406,7 @@ a.read_more2:hover {
 }
 
 .service-list-col1 i {
+    display:;
     color: #888;
     font-size: 19px;
     font-style: normal;
@@ -563,7 +562,7 @@ img {
 
 
 #clients {
-    padding: 0px 0px;
+    padding: 60px 0px;
 }
 
 .client_area {
@@ -770,29 +769,22 @@ img {
 }
  
 #aboutUs {
-    padding: 40px 0 20px;
+    padding: 40px 0 60px;
 }
 section.companyInfo{
 }
 section.companyInfo{padding: 30px 0 0 0;}
 .company-bg{
-    background: #fff;
+    background#fff;
     padding: 50px 0;
 }
 .company-bg .content{
-    background-image:url(http://php.loc/NadyaProject/img/logo123.svg);
-	background-repeat: no-repeat;
-	background-size: 100px;
-	background-attachment:scroll;
-	background-position: 40px;
-	text-align:right;
-    border-radius: 30px;
+    background:#1d3546;
     color: #fff;
     float: right;
     padding: 34px;
     position: relative;
-    padding-left: 160px;
-    background-color: black;
+    text-align: right;
 }
 .company-bg .content h2{ 
     color: #fff; 
@@ -1036,27 +1028,6 @@ section.companyInfo{padding: 30px 0 0 0;}
     color: #fff;
 }
 
-/* Footer footer
--------------------------------------------------*/
-.bottom {
-    border-top: 1px solid transparent;
-    border-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -moz-border-image: -moz- linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-border-image: -webkit- linear-gradient(90deg,#f56772,#ba6bff);
-    border-image-slice: 1;
-    font-size: 20px;
-    margin-bottom: -20px;
-
-}
-
-.p_footer {
-    background-color: black;
-    text-align: center;
-    color: white;
-    padding: 20px 0 20px 0;
-}
-
-
 /* Animation Timers
 ---------------------------------*/
 .delay-02s {
@@ -1170,9 +1141,10 @@ a.fancybox {
 }
 
 #filters ul li a:hover h5, #filters ul li a.active h5 {
-    background-image: linear-gradient(90deg,#f56772,#ba6bff);
+    background: #fed325;
     color: #040404;
     text-decoration: none;
+    border: #fed325 solid 1px;
 }
 
 .section-title h2 {
@@ -1224,8 +1196,6 @@ a.fancybox {
     overflow: hidden;
     display: block;
     position: relative;
-    width: 100%;
-    padding: -100px;
 }
 
 .portfolio-item .portfolio_img img {
@@ -1471,9 +1441,9 @@ a.fancybox {
 	overflow: hidden;
 	margin: 10px 1%;
 	min-width: 320px;
-	max-width: 100%;
+	max-width: 480px;
 	max-height: 360px;
-	/* width: 48%; */
+	width: 48%;
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
@@ -1818,8 +1788,8 @@ div.mc-image {
 /*
    Media Queries
 --------------------------- */
-
 @media (max-width: 768px) {
+.collapse {/* display: none; *//* visibility: hidden; */}
 p{
 font-size:14px;
 }
@@ -1832,9 +1802,9 @@ padding: 38px 0;
 }
 .top_left_cont h2 {
 font-size: 25px;
-color: #FFF;
 line-height: 39px;
 margin: 0 0 9px 0;
+margin-top: 30vh;
 }
 .inner_section {
 padding: 20px 0 20px;
@@ -1849,7 +1819,7 @@ line-height:22px;
 .service_block h3 { 
 font-size: 16px;
 }
-.service_block p {
+service_block p {
 font-size: 14px; 
 margin: 0px;
 margin-bottom: 20px;
@@ -1863,7 +1833,7 @@ margin: 0 18px;
 .page_section.team{
 padding: 40px 0;
 }
- #clients {
+, #clients {
 padding: 40px 0;
 }
 .client_logos ul li {
@@ -1905,13 +1875,12 @@ margin: 0px;
 color: #222;
 background: #F9F9F9;
 }
-}
-
-@media (max-width: 480px) { 
+} 
+@media (max-width: 480px){ 
 .team_area {
 width: 99%;
 }
-
+}
 .input-group {
     width: 100%;
 }
@@ -1921,185 +1890,155 @@ width: 99%;
     line-height: 30px;
     /* color: #fed325; */
     font-family: 'Raleway', sans-serif;
-    color: #1d3546;
+    color: white;
     font-weight: bold;
     font-size: 20px;
 }
-.navbar .navbar-brand  .material-icons {
+.navbar .navbar-brand  .material-icons{
 	height: 27px;
 	color: #f3a200;
+}	
+.imglogo{
+    margin-top: -14px;
 }
-}
-#bsearch_text{
-    padding: 7px ;
-    width: 222px;
-}
-.scroll-link{
-    color: white !important;
-
-}
-.containerheader{
-    background-color: black;
-}
-.navbar navbar-default{
-    background-color: black;
-}
-.mainfon{
-    display: flex;
-    height: 680px;
-    background-color: #090909;
-}
-.mainfontext{
-    flex: 1 1 40%;
-    color: white;
-    width: 900px;
-    text-align: center;
-    padding-top: 6%;
-    font-size: 50px;
-}
-.mainfonimg{
-    flex: 1 1 60%;
-}
-.mainfonimg1{
-    height: 680px;
-}
-.begintext{
-    color: #d1d1d1;
-    text-align: left;
-    display: inline-block;
-    font-size: 24px;
-    width: 400px;
-    height: 200px;
-}
-.scroll-link:hover{
-    background-color: white;
-    color: black;
-}
-.logoheader{
-    font-weight: bold;
-    color: white;
-}
-strong{
-    background-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.logo123{
-    display: inline-block;
-}
-.logo123img{
-    display: inline-block;
-    margin-left: 47.3%;
-    margin-bottom: 5%;
-    width: 50px;
-    height: 50px;
-    vertical-align: top !important;
-    margin-right: 10px;
-}
+/*Форма проверки заказа*/
 .clientry{
-    height: 700px;
-    width: 100%;
-    background-image: url(http://php.loc/NadyaProject/img/заказ.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    height: 100%;
     margin: 0;
-}
-.clientrytext{
-    font-weight: bold;
-    padding-bottom: 7%;
-    padding-top: 50px;
-    color: white;
-    text-align: center;
-    font-size: 46px;
 }
 .divtry{
     margin-left: auto;
     margin-right: auto;
     height: 80%;
-    width: 60%;
-    background-color: rgba(0, 0, 0, 0.50);
+    width: 90%;
+
     border-radius: 60px;
 }
 .otstup{
     width: 5%;
-    height: 5%;
+    height: 10%;
 }
-
-.formtry {
-    justify-content: center;
-}
-
-.labeltry{
-    text-align: center;
-    margin-left: 10%;
-    display: inline-block;
+.clientrytext{
+    font-weight: bold;
+    padding-bottom: 5%;
+    padding-top: 5%;
     color: white;
-    font-size: 18px;
-    margin-bottom: 5%;
+    text-align: center;
+    font-size: 36px;
+}
+.logo123img{
+    width: 50px;
+    height: 50px;
+}
+.labeltry{
+    color: white;
+    font-size: 22px;
 }
 .divtry1{
     margin-top: 2%;
     height: 20%;
-    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 .try1{
-    display: inline-block;
-    margin-bottom: 5%;
     margin-left: 2%;
-    width: 60%;
+    width: 300px;
     background-color: rgba(0, 0, 0, 0);
     border: 0px;
-    border-bottom: 1px solid transparent;
-    border-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -moz-border-image: -moz- linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-border-image: -webkit- linear-gradient(90deg,#f56772,#ba6bff);
-    border-image-slice: 1;
+    border-bottom: 1px solid white;
     font-size: 18px;
     padding-top: 5px;
     color: white;
 }
+.try1:hover{
+    -webkit-transition-duration: 1.7s;
+       -o-transition-duration: 1.7s;
+          transition-duration: 1.7s;
+    border-bottom: 2px solid #f3a200;
+}
 .try1:focus{
-    margin-left: 2%;
-    width: 60%;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0px;
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -moz-border-image: -moz- linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-border-image: -webkit- linear-gradient(90deg,#f56772,#ba6bff);
-    border-image-slice: 1;
-    font-size: 18px;
-    padding-top: 5px;
-    color: white;
+    -webkit-transition-duration: 1.7s;
+       -o-transition-duration: 1.7s;
+          transition-duration: 1.7s;
+    border-bottom: 2px solid #f3a200;
 }
 .divtry2{
     margin-top: 5%;
     margin-bottom: 5%;
 }
 .buttontry{
-    display: block;
-    margin: auto;
     border: 0;
-    margin-bottom: 3%;
-    background-image: linear-gradient(90deg,#f56772,#ba6bff);
+    background-color: #fed325;
     height: 50px;
-    width:  350px;
-    font-size: 18px;
+    width:  150px;
+    font-size: 12px;
     transition: transform 0.3s ease-out ;
-    color: white;
+    color: black;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .buttontry:hover{
     border: 0;
     transform: scale(1.1);
 }
-.fotip{
-    border-top: 1px solid white;
-    background-color: black;
-}
 .footerip{
-    font-size: 22px;
+    margin-bottom: -150px;
+    border-top: 1px solid white;
+    background-color: black !important;
+    color: white;
+    font-size: 2;
     padding: 14px 0 14px 0;
+}
+/*Выравнивание жёлтых окон*/
+@media (max-width: 1200px){
+    .service_block {
+        height: 380px;
+    }
+}
+@media (max-width: 992px){
+    .service_block {
+        height: 460px;
+    }
+}
+@media (max-width: 768px){
+    .service_block {
+        height: 300px;
+    }
+}
+@media (max-width: 366px){
+    .service_block {
+        height: 320px;
+    }
+}
+@media (width: 768px){
+    .service_block {
+        height: 460px;
+    }
+}
+.mapcon{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+.maptext{
+    display: block;
+    color: #222222;
+    font-family: 'Raleway', sans-serif;
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin: 0 0 15px;
+    text-align: center;
+}
+@media (max-width: 1000px){
+    /* .navStyle ul li{
+        display: none;
+    }
+    .navbar .navbar-toggle{
+        display: block;
+        float: right;
+    } */
+}
+#clientryz{
+    height: 13vh;
 }

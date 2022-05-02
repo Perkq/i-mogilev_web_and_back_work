@@ -18,6 +18,9 @@
 	<link href="css/ripples.min.css" rel="stylesheet">
 	<!-- Custome Styles -->
 	<link href="css/style.css" rel="stylesheet" type="text/css"> 
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/jquery.vide.js"></script>
 	
 </head>
 <body> 
@@ -26,19 +29,20 @@
 	<div class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
-			<div class="logo123">
-			<a class="navbar-brand" href="javascript:void(0)"><span class="logoheader"><strong>I-MOGILEV</strong></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="javascript:void(0)" class="navbar-brand"><img class="imglogo" src="img/logo123.svg" alt="logo" width="50px" height="50px"></img></a>
+				<a class="navbar-brand" href="javascript:void(0)">i-mogilev</a>
 			</div>
-			</div>
-			<div id="main-nav" class="navbar-collapse collapse navbar-responsive-collapse navStyle" data-toggle="collapse" data-target=".navbar-responsive-collapse" class = "navbar-toggle">
+			<div id="main-nav" class="navbar-collapse collapse navbar-responsive-collapse navStyle">
 				<ul class="nav navbar-nav" id="mainNav">
 					<li class="active"><a href="#hero_section" class="scroll-link">Главная</a></li>
-					<li><a href="#aboutUs" class="scroll-link">О нас</a></li>
-					<li><a href="#service" class="scroll-link">Услуги</a></li>
+					<li><a href="#service" class="scroll-link">О нас</a></li>
 					<li><a href="#Portfolio" class="scroll-link">Устройства</a></li>
 					<li><a href="#clients" class="scroll-link">Партнеры</a></li>
-					<li><a href="#team" class="scroll-link">Команда</a></li>
 					<li><a href="#contact" class="scroll-link">Контакты</a></li>
 				</ul>
 			</div>
@@ -46,38 +50,27 @@
 	</div>
 </header>
  <!--Hero_Section-->
-<section class="top_cont_outer">
-	<div class="mainfon">
-		<div class="mainfontext"><strong>У Вас появилась проблема?</strong><br/><br/><br/><span class="begintext">i-mogilev - решит её быстро,недорого и самое главное качественно!</span></div>
-		<div class="mainfonimg"><img src="img\шапка52.png" class="mainfonimg1" alt=""></div>
-	</div>
-</section>
-<!--Hero_Section-->	
-<section id="aboutUs" class="companyInfo">
-<div class="company-ever">
-	<div class="container"> 
-		<div class="row company-bg">
-			<div class="col-md-6">
-				<div class="company-thumb">
-					<img src="img/img-1.png" alt="">
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="content">
-					<h2><strong>Акция</strong></h2>
-						<p>Закажите ремонт сейчас,и в подарок Вам мы про-<br/>ведём бесплатную диагностику вашего девайса.</p>
-					<div class="compayt-button">
-						<a href="#contact" class="scroll-link btn btn-effect scroll-link">Заказать<i class="icon-envelope"></i></a>
+<section id="hero_section" class="top_cont_outer" data-vide-bg="videos/15">
+	<div class="hero_wrapper">
+		<div class="container">
+			<div class="hero_section">
+				<div class="row">
+					<div class="col-lg-5 col-sm-7">
+						<div class="top_left_cont zoomIn wow animated"> 
+							<h2><strong>Сломался гаджет -</strong>
+							<span style="font-size:28px;">теперь наша проблема!</span></h2>
+							<p class="pfong">Решение любой проблемы, связанной с ремонтом мобильных телефонов,
+								 фотоаппаратов, навигаторов, ноутбуков, планшетов, видеокамер. 
+								 Кратчайшие сроки ремонта, гарантия до 4 месяцев.</p>
+							<a href="#contact" class="btn btn-raised btn-lg scroll-link">Заказать ремонт</a>
+							<a href="#clientryz" class="btn btn-raised btn-lg scroll-link">Проверить заказ</a> </div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
-<!-- .container -->
-</div>
-		
-<!--Aboutus--> 
-
+</section>
 <!--Service-->
 <section	id="service">
 	<div class="container">
@@ -218,7 +211,7 @@
 			<!--/Portfolio Item --> 
 			
 			<!-- Portfolio Item -->
-			<figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 100%; opacity: 1;" class="portfolio-item one-four	design	isotope-item effect-oscar">
+			<figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four	design	isotope-item effect-oscar">
 				<div class="portfolio_img"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
 			 <figcaption>		
 				<div>
@@ -325,41 +318,31 @@
 	</div>
 </div>
 </section>
-<!--logos--> 
-<!--/Team-->
-<div class="clientry">
+
+
+<div id="clientryz"></div>
+<!--clientry-->
+<section class="clientrysection">
+<div class="clientry" data-vide-bg="img/заказ">
 	<div class="otstup"></div>
 	<div class="divtry">
-		<div class="clientrytext">Проверка состояния заказа</div>
-		<form method="post" action="" class="formtry" id="form">
-			<label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="">
-			<br />
-			<label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789...">
-			<button class="buttontry" type="submit" id="form_subm">Проверить</button>
-			<img src="img/logo123.svg" alt="логотип" class="logo123img"></img>
-			<?php
-				include 'php\connection_admin.php';
-				    
-				$serie = $_POST['series'];
-				$check = $_POST['check'];
-
-				$sql = "SELECT * FROM admins";
-				$result = $conn->query($sql);
-
-				foreach($result as $row) {
-       			global $serie;
-        		global $check;
-
-        		 if (($serie  == $row["Login"]) && ($check  == $row["Password"])) {
-        		     echo "<script> window.open('php/admin_page.php')</script>";
-        		 }
-			}
-			mysqli_close($conn);
-
-		?>
+		<div class="clientrytext" >Проверка состояния заказа</div>
+		<form action="" class="formtry">
+			<center class="divtry1"><label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="" id="tryseries" placeholder="AB" maxlength="2"></center>
+			<center class="divtry1"><label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="" id="trynumber" placeholder="123456789..."></center>
+			<center class="divtry2"><button class="buttontry" type="button">ПРОВЕРИТЬ</button></center>
+			<center><img src="img/logo123.svg" alt="логотип" class="logo123img"></img></center>
 		</form>
 	</div>
 </div>
+</section >
+<!--/clientry-->
+
+<div id="map" class="mapcon">
+<h2 class="maptext">Наши офисы в Минске</h2>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeae13ba7a3769de7e9be742d012c19677d36b995b1535e9e6de6cd528242bae0&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+</div>
+
 <!--Footer-->
 <footer class="footer_wrapper" id="contact">
 	<div class="container">
@@ -402,7 +385,7 @@
 				<div class="col-lg-8 wow fadeInLeft delay-06s">
 					<div class="form">
 						<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-						<form method= "post" action="" id="form_sec" enctype="multipart/form-data"  novalidate> 
+						<form method= "POST"  novalidate> 
 							<div class="form-group label-floating">
 								<div class="input-group">
 									<label class="control-label">Имя</label>
@@ -428,43 +411,8 @@
 								maxlength="999" style="resize:none"></textarea>
 								</div>
 							</div> 		 
-							<div id="success"> </div>
-							<div class="form-group label-floating">
-								<div class="input-group">
-									<label class="control-label">File</label>
-									<input type="file" style=" position: inherit; opacity:1;" class="btn btn-block btn-lg btn-raised btn-info pull-right" name= "file">
-								</div>
-							</div> 	
-							<br />
-							<br />
+							<div id="success"> </div> 
 							<button type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
-
-							<?php 
-    						include 'php\connection_devices.php';
-
-							if(!empty($_FILES['file'])) {
-								$file = $_FILES['file'];
-								$name = $file['name'];
-								$pathFile = __DIR__ . '/user_img/' . $name; 
-
-								if(!move_uploaded_file($file['tmp_name'], $pathFile)) {
-									echo 'Файл не смог загрузиться';
-								}
-							}
-
-							
-
-   							$pogon = $_POST['name'];
-    						$ssilka = $_POST['email'];
-   							$text = $_POST['message'];
-							date_default_timezone_set('Europe/Minsk');
-							$fulldate = getdate();
-							$date = $fulldate["mday"] . "/" . $fulldate["mon"] . "/" . $fulldate["year"];
-
-    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '$date', 'moderation', '$text', '$name')";
-    						$conn->query($sql);
-							mysqli_close($conn);
-							?>
 						</form>
 					</div>
 				</div>
@@ -794,9 +742,7 @@
 	</div>
 </div> 
     
-<div id="map">
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeae13ba7a3769de7e9be742d012c19677d36b995b1535e9e6de6cd528242bae0&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=false"></script>
-</div>
+
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
  
@@ -805,13 +751,13 @@
 <script src="js/wow.min.js"></script>
 
 <!-- Script Files -->
-
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.nav.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
 <script src="fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
 <script type="text/javascript" src="js/custom.js"></script>
+
 
 <script>
 	$(function () {
@@ -826,12 +772,13 @@
 (function(){ var widget_id = 'o0KDbaO5fS';var d=document;var w=window;function l(){
 var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
 <!-- {/literal} END JIVOSITE CODE -->
- <footer class= "bottom">
-	<p class = "p_footer">И.П. Нестеренко Е.А. УНП 791041642 от 28.04.2016 выдано Администрацией Октябрьского района г.Могилёва</p>
-	<p class = "p_footer">  i-m.by	© 2017</p>
+    <footer class="footerip">
+ <p align="center" \>
+ И.П. Нестеренко Е.А. УНП 791041642 от 28.04.2016 выдано Администрацией Октябрьского района г.Могилёва
+ </p>
+<p align="center">  
+i-m.by	© 2017
+  </p>
   </footer>
-
-
-
 </body>
 </html>

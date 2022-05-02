@@ -4,7 +4,6 @@ Note:
 Licence under Creative Commons Attribution 3.0 
 Do not remove the back-link in this web template 
 -------------------------------------------------------*/
-
 $(window).load(function() {
     jQuery('#all').click();
     return false;
@@ -12,27 +11,14 @@ $(window).load(function() {
 
 $(document).ready(function() {
     $('#header_wrapper').scrollToFixed();
-    // $('.res-nav_click').click(function() {
-    //     $('.main-nav').slideToggle();
-    // return false;
-    // });
-
-    // $('#mainNav').click(function() {
-    //     $('.main-nav').slideUp();
-    //     return false;
-    // }); 
-
-    // $('.res-nav_click').click(function() {
-    //     $('.main-nav').slideToggle();
-    //     return false
-	// if ($('#main-nav ul li:first-child').hasClass('active')) {
-    //     $('#main-nav').css('background', 'red');
-    // }
-    // });
-           
-    
+    $('.res-nav_click').click(function() {
+        $('.main-nav').slideToggle();
+        return false
+	if ($('#main-nav ul li:first-child').hasClass('active')) {
+        $('#main-nav').css('background', 'red');
+    }
+    });
 	
-
     function resizeText() {
         var preferredWidth = 767;
         var displayWidth = window.innerWidth;
@@ -89,13 +75,9 @@ $(document).ready(function() {
             columnNumb = 4;
         } else if (winWidth > 900) {
             columnNumb = 2;
-        }
-        // } else if (winWidth < 640) {
-        //     columnNumb = 1;
-        // }
-         else if (winWidth > 640) {
+        } else if (winWidth > 479) {
             columnNumb = 2;
-        } else if (winWidth < 640) {
+        } else if (winWidth < 479) {
             columnNumb = 1;
         }
 
