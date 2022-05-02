@@ -354,9 +354,6 @@
   content: "\f040";
 }
 .fa-map-marker:before {
-  background-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   content: "\f041";
 }
 .fa-adjust:before {
@@ -424,9 +421,6 @@
   content: "\f057";
 }
 .fa-check-circle:before {
-  background-image: linear-gradient(90deg,#f56772,#ba6bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   content: "\f058";
 }
 .fa-question-circle:before {
@@ -1126,9 +1120,6 @@
 }
 .fa-dollar:before,
 .fa-usd:before {
-  background-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   content: "\f155";
 }
 .fa-rupee:before,
@@ -1179,9 +1170,6 @@
   content: "\f163";
 }
 .fa-thumbs-up:before {
-  background-image: linear-gradient(90deg,#f56772,#ba6bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   content: "\f164";
 }
 .fa-thumbs-down:before {
