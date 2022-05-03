@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 17 2022 г., 19:12
+-- Время создания: Май 02 2022 г., 16:33
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.1.33
 
@@ -39,8 +39,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `Login`, `Password`, `AccessLevel`) VALUES
-(1, 'admin', 'bigadmin', 'Полный доступ.'),
-(2, 'admin', 'smalladmin', 'Ограниченный доступ.');
+(1, 'ad', 'bigadmin', 'Полный доступ.'),
+(2, 'ad', 'smalladmin', 'Ограниченный доступ.');
 
 --
 -- Индексы сохранённых таблиц
