@@ -328,7 +328,7 @@
 	<div class="divtry">
 		<div class="clientrytext" >Проверка состояния заказа</div>
 		<form action="" class="formtry" method="post" id="form">
-			<center class="divtry1"><label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength=""></center>
+			<center class="divtry1"><label class="labeltry" for="tryseries">Серия чека </label><input class="try1" type="text" name="series" id="tryseries" placeholder="AB" maxlength="2"></center>
 			<center class="divtry1"><label class="labeltry" for="trynumber">Номер чека </label><input class="try1" type="text" name="check" id="trynumber" placeholder="123456789..."></center>
 			<center class="divtry2"><button class="buttontry" type="submit" id="form_subm">ПРОВЕРИТЬ</button></center>
 			<center><img src="img/logo123.svg" alt="логотип" class="logo123img"></img></center>
