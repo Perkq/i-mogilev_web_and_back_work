@@ -1,5 +1,10 @@
 .main_table {
     width: 50%;
-    padding-left: 25%;
+    padding-left: 23%;
     margin: 0;
+}
+
+#admin {
+    font-size: 40px;
+    text-align: center;
 }

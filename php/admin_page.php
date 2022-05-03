@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="/css/admin_page.css">
 	</head>
 	<body>
-		<p>Панелька админа</p>
+		<p id="admin">Панель админа</p>
 		<div class = "main_table">
 			<?php
 					include 'connection_devices.php';
@@ -21,11 +21,11 @@
 
 					echo "<table rules = 'all' style = 'border: 1px solid black;'>";
 					foreach($result as $row) {
-					echo "<tr><td>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_mod.php' method='post'><input type='radio' name = 'moder' value='progress' id='progr'><label for='progr'>In progress</label><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
+					echo "<tr><td style='width: 30px; text-align: center;'>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_mod.php' method='post'><input type='radio' name = 'moder' value='progress' id='progr'><label for='progr'>In progress</label><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
 						<input type='hidden' name='state' value='" . $row['State'] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px /></td></tr>";
+                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
 					}
 					echo "</table>";
 
@@ -36,10 +36,10 @@
 
 					echo "<table rules = 'all' style = 'border: 1px solid black;'>";
 					foreach($result2 as $row) {
-					echo "<tr><td>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_progress.php' method='post'><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
+					echo "<tr><td  style='width: 30px; text-align: center;'>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_progress.php' method='post'><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px /></td></tr>";
+                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px height = 150px/></td></tr>";
 					}
 					echo "</table>";
 
@@ -50,11 +50,11 @@
 
 					echo "<table rules = 'all' style = 'border: 1px solid black;'>";
 					foreach($result3 as $row) {
-					echo "<tr><td>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_done.php' method='post'><input type='radio' name = 'moder' value='progress' id='progr'><label for='progr'>In progress</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
+					echo "<tr><td  style='width: 30px; text-align: center;'>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_done.php' method='post'><input type='radio' name = 'moder' value='progress' id='progr'><label for='progr'>In progress</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
 						<input type='hidden' name='state' value='" . $row['State'] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px /></td></tr>";
+                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
 					}
 					echo "</table>";
 
@@ -65,11 +65,11 @@
 
 					echo "<table rules = 'all' style = 'border: 1px solid black;'>";
 					foreach($result4 as $row) {
-					echo "<tr><td>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_denied.php' method='post'><input type='radio' name = 'moder' value='progress' id='progr'><label for='progr'>In progress</label><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label>
+					echo "<tr><td  style='width: 30px; text-align: center;'>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_denied.php' method='post'><input type='radio' name = 'moder' value='progress' id='progr'><label for='progr'>In progress</label><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label>
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
 						<input type='hidden' name='state' value='" . $row['State'] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px /></td></tr>";
+                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
 					}
 					echo "</table>";
 
