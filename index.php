@@ -417,7 +417,7 @@
 							<div class="form-group label-floating">
 								<div class="input-group">
 									<label class="control-label">Email</label>
-									<input type="email" class="form-control" name= "email" required
+									<input type="text" class="form-control" name= "email" id="emailVal" required
 									data-validation-required-message="Please enter your email" />
 								</div>
 							</div> 	
@@ -438,6 +438,10 @@
 									<input type="file" style=" position: inherit; opacity:1;" class="btn btn-block btn-lg btn-raised btn-info pull-right" name= "file">
 								</div>
 							</div> 	
+							<div class="input-group">
+									<label class="error"></label>
+									<p class="help-block"></p>
+								</div>
 							<br />
 							<br />
 							<button type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
@@ -459,11 +463,17 @@
    							$pogon = $_POST['name'];
     						$ssilka = $_POST['email'];
    							$text = $_POST['message'];
+							$checkSerie = "AB";
+							$arr = str_split($ssilka);
+							foreach ($arr as $one) {
+								$checkNumber += ord($one);
+							}
+							$checkNumber = strval($checkNumber);
 							date_default_timezone_set('Europe/Minsk');
 							$fulldate = getdate();
 							$date = $fulldate["mday"] . "/" . $fulldate["mon"] . "/" . $fulldate["year"];
 
-    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$pogon', '$ssilka', '$date', 'moderation', '$text', '$name')";
+    						$sql = "INSERT INTO moderation (`Name`, `Email`, `Date`, `State`, `Comment`, `Photo`, `check series`, `check number`) VALUES ('$pogon', '$ssilka', '$date', 'moderation', '$text', '$name', '$checkSerie', '$checkNumber')";
     						$conn->query($sql);
 							mysqli_close($conn);
 							}
@@ -812,6 +822,7 @@
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
 <script src="fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/emailValidate.js"></script>
 
 
 <script>
