@@ -25,7 +25,7 @@
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
 						<input type='hidden' name='state' value='" . $row['State'] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
+                </form></td><td>" . $row["Comment"] . "</td><td>" . $row["check series"] . "</td><td>" . $row["check number"]  . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
 					}
 					echo "</table>";
 
@@ -39,7 +39,7 @@
 					echo "<tr><td  style='width: 30px; text-align: center;'>" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>" . $row["EMail"] . "</td><td>" . $row["Date"] . "</td><td><form action='dev_progress.php' method='post'><input type='radio' name = 'moder' value='done' id='wdone'><label for='wdone'>Done</label><input type='radio' name = 'moder' value='Denied' id='den'><label for='den'>Denied</label>
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px height = 150px/></td></tr>";
+                </form></td><td>" . $row["Comment"] . "</td><td>" . $row['check series'] . "</td><td>" . $row['check number']  .  "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px height = 150px/></td></tr>";
 					}
 					echo "</table>";
 
@@ -54,7 +54,7 @@
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
 						<input type='hidden' name='state' value='" . $row['State'] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
+                </form></td><td>" . $row["Comment"] .  "</td><td>" . $row['check series'] . "</td><td>" . $row['check number'] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
 					}
 					echo "</table>";
 
@@ -69,7 +69,7 @@
                         <input type='hidden' name='id' value='" . $row["id"] . "' />
 						<input type='hidden' name='state' value='" . $row['State'] . "' />
                         <input type='submit' value='Сохранить'>
-                </form></td><td>" . $row["Comment"] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
+                </form></td><td>" . $row["Comment"] .  "</td><td>" . $row['check series'] . "</td><td>" . $row['check number'] . "</td><td><img src='/user_img/" . $row['Photo'] . "' width = 300px  height = 150px /></td></tr>";
 					}
 					echo "</table>";
 

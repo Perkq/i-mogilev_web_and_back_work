@@ -9,47 +9,38 @@ if(isset($_POST["id"]))
     $userid = $conn->real_escape_string($_POST["id"]);
 
     $state = $_POST["moder"];
-    
-    if ($state == "progress") {
-        $sql = "SELECT * FROM done WHERE id = '$userid'";
+    $sql = "SELECT * FROM done WHERE id = '$userid'";
         $result = $conn->query($sql);
+    $subject = "Состояние заказа";
     
-        foreach($result as $row)
+    foreach($result as $row)
         {
         $name = $row['Name'];
         $email = $row['EMail'];
         $date = $row['Date'];
         $comment = $row['Comment'];
         $photo = $row['Photo'];
+        $checkSerie = $row['check series'];
+        $checkNumber = $row['check number'];
     
-        $sql2 = "INSERT INTO inprogress (`Name`, `EMail`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$name', '$email', '$date', 'in progress', '$comment', '$photo')";
-        
+        if ($state == "Denied") {
+        $sql2 = "INSERT INTO denied (`Name`, `EMail`, `Date`, `State`, `Comment`, `Photo`, `check series`, `check number`) VALUES ('$name', '$email', '$date', 'Done', '$comment', '$photo', '$checkSerie', '$checkNumber')";
         $conn->query($sql2);
-        
-    }
-     $sql3 = "DELETE FROM done WHERE id = '$userid'";   
-     $conn->query($sql3);    
-    }
-
-    if ($state == "Denied") {
-        $sql = "SELECT * FROM done WHERE id = '$userid'";
-        $result = $conn->query($sql);
-    
-        foreach($result as $row)
-        {
-        $name = $row['Name'];
-        $email = $row['EMail'];
-        $date = $row['Date'];
-        $comment = $row['Comment'];
-        $photo = $row['Photo'];
-    
-        $sql2 = "INSERT INTO denied (`Name`, `EMail`, `Date`, `State`, `Comment`, `Photo`) VALUES ('$name', '$email', '$date', 'Denied', '$comment', '$photo')";
-        $conn->query($sql2);
-        
-        }
         $sql3 = "DELETE FROM done WHERE id = '$userid'";   
-        $conn->query($sql3);    
-    }
+        $conn->query($sql3);  
+        $message = "В вашем заказе отказано";
+        } elseif ($state == "progress") {
+        $sql2 = "INSERT INTO inprogress (`Name`, `EMail`, `Date`, `State`, `Comment`, `Photo`, `check series`, `check number`) VALUES ('$name', '$email', '$date', 'Done', '$comment', '$photo', '$checkSerie', '$checkNumber')";
+        $conn->query($sql2);
+         $sql3 = "DELETE FROM done WHERE id = '$userid'";   
+        $conn->query($sql3); 
+        $message = "Ваш заказ в процессе выполнения";
+        }
+        }
+
+        $headers = "Доброго времени суток, $name" . "\r\n";
+        mail($email, $subject, $message, $headers);
+
 
     header("Location: admin_page.php");
     $conn->close();  
