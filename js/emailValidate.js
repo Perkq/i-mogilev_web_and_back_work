@@ -25,7 +25,7 @@ $(function () {
 		} else {
 			$error.fadeIn();
 			$error.text("Email: " + email + " is not valid");
+			return false;
 		}
-		return false;
 	}
 });
