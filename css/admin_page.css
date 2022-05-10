@@ -1,10 +1,46 @@
-.main_table {
+body {
+    background-color: seashell;
+}
+
+table {
+    border: 4px solid black;
     width: 50%;
-    padding-left: 23%;
-    margin: 0;
+    text-align: start;
+    margin: auto;
+    border-radius: 10px;
+    border-spacing: 2px;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.idT {
+    width: 30px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+}
+
+.moder {
+    background-color: gray;
+}
+
+.progress {
+    background-color: green;
+}
+
+.done {
+    background-color: gold;
+}
+
+.denied {
+    background-color: red;
 }
 
 #admin {
-    font-size: 40px;
-    text-align: center;
+    font-size: 50px;
 }

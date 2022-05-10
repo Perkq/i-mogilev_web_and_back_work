@@ -385,20 +385,6 @@
 					}
 				}
 				
-
-				// if($connDev->query($conn1)) 
-				// 	echo "<script> alert('Состояние Вашего заказа: на модерации')</script>";
-
-				// if(mysql_num_rows($connDev->query($conn2))) 
-				// 	echo "<script> alert('Состояние Вашего заказа: отказано')</script>";
-
-				// if(mysql_num_rows($connDev->query($conn3))) 
-				// 	echo "<script> alert('Состояние Вашего заказа: завершён')</script>";
-
-				// if(mysql_num_rows($connDev->query($conn4))) 
-				// 	echo "<script> alert('Состояние Вашего заказа: в процессе выполнения')</script>";
-				
-
 				foreach($result as $row) {
        			global $serie;
         		global $check;
@@ -409,7 +395,6 @@
 
 				 
 				}
-			mysqli_close($conn);
 
 			?>
 		</form>
@@ -504,7 +489,7 @@
 								</div>
 							<br />
 							<br />
-							<button type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
+							<button id="subm" type="submit" value= "Отправить" class="btn btn-block btn-lg btn-raised btn-info pull-right">Отправить</button><br />
 							<?php 
     						include 'php\connection_devices.php';
 
@@ -876,6 +861,7 @@
 <script src="js/wow.min.js"></script>
 
 <!-- Script Files -->
+<script type="text/javascript" src="js/emailValidate.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
 <script type="text/javascript" src="js/jquery.nav.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
