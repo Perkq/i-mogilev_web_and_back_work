@@ -335,11 +335,69 @@
 			<?php
 				include 'php\connection_admin.php';
 				
+				$connDev = new mysqli("localhost", "root", "root", "devices_state");
+
 				$serie = $_POST['series'];
 				$check = $_POST['check'];
 
 				$sql = "SELECT * FROM admins";
 				$result = $conn->query($sql);
+
+				$conn1 = "SELECT * FROM moderation";
+				$conn2 = "SELECT * FROM denied";
+				$conn3 = "SELECT * FROM done";
+				$conn4 = "SELECT * FROM inprogress";
+				
+				$res = $connDev->query($conn1);
+				foreach($res as $one) {
+					global $serie;
+					global $check;
+					if(($serie == $one["check series"]) && ($check == $one["check number"])) {
+					echo "<script> alert('Состояние вашего заказа: на модерации')</script>";
+					}
+				}
+
+				
+				$res = $connDev->query($conn2);
+				foreach($res as $one) {
+					global $serie;
+					global $check;
+					if(($serie == $one["check series"]) && ($check == $one["check number"])) {
+					echo "<script> alert('Состояние вашего заказа: отказано')</script>";
+					}
+				}
+				
+				$res = $connDev->query($conn3);
+				foreach($res as $one) {
+					global $serie;
+					global $check;
+					if(($serie == $one["check series"]) && ($check == $one["check number"])) {
+					echo "<script> alert('Состояние вашего заказа: завершён')</script>";
+					}
+				}
+				
+				$res = $connDev->query($conn4);
+				foreach($res as $one) {
+					global $serie;
+					global $check;
+					if(($serie == $one["check series"]) && ($check == $one["check number"])) {
+					echo "<script> alert('Состояние вашего заказа: в процессе выполнения')</script>";
+					}
+				}
+				
+
+				// if($connDev->query($conn1)) 
+				// 	echo "<script> alert('Состояние Вашего заказа: на модерации')</script>";
+
+				// if(mysql_num_rows($connDev->query($conn2))) 
+				// 	echo "<script> alert('Состояние Вашего заказа: отказано')</script>";
+
+				// if(mysql_num_rows($connDev->query($conn3))) 
+				// 	echo "<script> alert('Состояние Вашего заказа: завершён')</script>";
+
+				// if(mysql_num_rows($connDev->query($conn4))) 
+				// 	echo "<script> alert('Состояние Вашего заказа: в процессе выполнения')</script>";
+				
 
 				foreach($result as $row) {
        			global $serie;
@@ -348,7 +406,9 @@
         		 if (($serie  == $row["Login"]) && ($check  == $row["Password"])) {
         		     echo "<script> window.open('php/admin_page.php')</script>";
         		 }
-			}
+
+				 
+				}
 			mysqli_close($conn);
 
 			?>
